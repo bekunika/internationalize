@@ -23,8 +23,8 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.add_dependency 'activerecord', '>= 4.2', '< 5.2'
-  spec.add_dependency 'activemodel', '>= 4.2', '< 5.2'
+  spec.add_dependency 'activerecord', '>= 4.2', '=< 5.2'
+  spec.add_dependency 'activemodel', '>= 4.2', '=< 5.2'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})

@@ -41,9 +41,7 @@ module Internationalize
         has_many :translations, class_name: translation_class.name,
                                 foreign_key: options[:foreign_key],
                                 dependent: :destroy,
-                                autosave: true,
-                                inverse_of: :internationalize_model
-
+                                autosave: true
         accepts_nested_attributes_for :translations,
                                       allow_destroy: true,
                                       reject_if: proc { |attrs| translated_attrs.all? { |k| attrs[k.to_s].blank? } }

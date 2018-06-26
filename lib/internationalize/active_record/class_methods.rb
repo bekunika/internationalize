@@ -12,7 +12,6 @@ module Internationalize
           klass.belongs_to :internationalize_model,
                            class_name: name,
                            foreign_key: translation_options[:foreign_key],
-                           inverse_of: :translations,
                            autosave: true
 
           klass.validates :locale, uniqueness: { scope: translation_options[:foreign_key] }

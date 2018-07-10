@@ -38,9 +38,9 @@ module Internationalize
 
         translation_class.table_name = options[:table_name]
 
-        accepts_nested_attributes_for :translations,
-                                      allow_destroy: true,
-                                      reject_if: proc { |attrs| translated_attrs.all? { |k| attrs[k.to_s].blank? } }
+        # accepts_nested_attributes_for :translations,
+        #                               allow_destroy: true,
+        #                               reject_if: proc { |attrs| translated_attrs.all? { |k| attrs[k.to_s].blank? } }
 
         validate :validate_having_translations
 

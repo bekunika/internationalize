@@ -16,7 +16,7 @@ module Internationalize
 
       def locale(locale)
         translation = translations.select { |tr| tr.locale.to_s == locale.to_s }.first
-        translation || translations.where(locale: locale).first_or_initialize
+        translation || translations.build
       end
 
       def translation
